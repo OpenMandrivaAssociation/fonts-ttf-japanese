@@ -1,4 +1,4 @@
-%define src_version 20070226
+%define src_version 20070404
 %define version     0.%{src_version}
 %define release     %mkrel 1
 %define src_name    umeplus-fonts
@@ -31,7 +31,6 @@ Requires(postun): fontconfig >= 2.4.1
 %description
 This Package provides Free Japanese TrueType fonts (umeplus-gothic, 
 umeplus-p-gothic)
-
 
 %prep
 %setup -q -n %{src_name}-%{src_version}
@@ -77,9 +76,3 @@ rm -fr %buildroot
 %config(noreplace) %_datadir/fonts/TTF/japanese/fonts.alias
 %_datadir/fonts/TTF/japanese/fonts.dir
 %_datadir/fonts/TTF/japanese/fonts.scale
-%if %mdkversion < 20070
-%ghost %_datadir/fonts/TTF/japanese/fonts.cache-1
-%endif
-
-
-
