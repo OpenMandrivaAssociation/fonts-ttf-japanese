@@ -1,4 +1,4 @@
-%define src_version 20070404
+%define src_version 20070517
 %define version     0.%{src_version}
 %define release     %mkrel 1
 %define src_name    umeplus-fonts
@@ -12,7 +12,7 @@ URL:		http://www.geocities.jp/ep3797/modified_fonts_01.html
 Group:		System/Fonts/True type
 
 ## Original fonts is here
-Source0:	%{src_name}-%{src_version}.tar.bz2
+Source0:	http://www.geocities.jp/ep3797/snapshot/modified_fonts/%{src_name}-%{src_version}.tar.bz2
 Source1:	fonts-ttf-japanese_fonts.alias
 Source2:	fonts-ttf-japanese_fonts.dir
 Source3:	cidinst.japanese
