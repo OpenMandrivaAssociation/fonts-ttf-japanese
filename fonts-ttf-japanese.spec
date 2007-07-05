@@ -1,6 +1,6 @@
 %define src_version 20070517
 %define version     0.%{src_version}
-%define release     %mkrel 1
+%define release     %mkrel 2
 %define src_name    umeplus-fonts
 
 Summary:	Free Japanese TrueType fonts
@@ -23,8 +23,6 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	freetype-tools
 Obsoletes:	xtt-fonts
 Provides:	xtt-fonts
-Requires(post): chkfontpath
-Requires(postun): chkfontpath
 Requires(post): fontconfig >= 2.4.1
 Requires(postun): fontconfig >= 2.4.1
 
@@ -51,14 +49,16 @@ install -m 644 %{SOURCE1} %buildroot/%{_datadir}/fonts/TTF/japanese/fonts.alias
 install -m 644 %{SOURCE2} %buildroot/%{_datadir}/fonts/TTF/japanese/fonts.dir
 ln -sf %{_datadir}/fonts/TTF/japanese/fonts.alias %buildroot/%{_datadir}/fonts/TTF/japanese/fonts.scale
 
+mkdir -p %{buildroot}%_sysconfdir/X11/fontpath.d/
+ln -s ../../..%_datadir/fonts/TTF/japanese \
+    %{buildroot}%_sysconfdir/X11/fontpath.d/ttf-japanese:pri=50
+
 %post
-[ -x %_sbindir/chkfontpath ] && %_sbindir/chkfontpath -q -a %_datadir/fonts/TTF/japanese
 [ -x %{_bindir}/fc-cache ] && %{_bindir}/fc-cache 
 
 
 %postun
 if [ "$1" = "0" ]; then
-   [ -x %_sbindir/chkfontpath ] && %_sbindir/chkfontpath -q -r %_datadir/fonts/TTF/japanese
    [ -x %{_bindir}/fc-cache ] && %{_bindir}/fc-cache 
 fi
 
@@ -70,9 +70,9 @@ rm -fr %buildroot
 %doc ChangeLog README
 %doc docs-*/ fontforge-scripts-*/
 
-%dir %_datadir/fonts/TTF/
 %dir %_datadir/fonts/TTF/japanese/
 %_datadir/fonts/TTF/japanese/*.ttf
 %config(noreplace) %_datadir/fonts/TTF/japanese/fonts.alias
 %_datadir/fonts/TTF/japanese/fonts.dir
 %_datadir/fonts/TTF/japanese/fonts.scale
+%_sysconfdir/X11/fontpath.d/ttf-japanese:pri=50
