@@ -1,6 +1,6 @@
-%define src_version 20070517
+%define src_version 20070703
 %define version     0.%{src_version}
-%define release     %mkrel 2
+%define release     %mkrel 1
 %define src_name    umeplus-fonts
 
 Summary:	Free Japanese TrueType fonts
