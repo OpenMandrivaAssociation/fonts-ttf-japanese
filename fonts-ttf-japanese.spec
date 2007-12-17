@@ -19,7 +19,6 @@ Source3:	cidinst.japanese
 Source4:	cidunin.japanese
 
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	freetype-tools
 Obsoletes:	xtt-fonts
 Provides:	xtt-fonts
