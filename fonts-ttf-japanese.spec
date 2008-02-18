@@ -1,9 +1,9 @@
 %define src_version 20080206
 %define version     0.%{src_version}
-%define release     %mkrel 1
+%define release     %mkrel 2
 %define src_name    umeplus-fonts
 
-Summary:	Free Japanese TrueType fonts
+Summary:	Japanese TrueType fonts
 Name:		fonts-ttf-japanese
 Version:	%{version}
 Release:	%{release}
