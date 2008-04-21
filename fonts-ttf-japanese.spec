@@ -1,4 +1,4 @@
-%define src_version 20080217
+%define src_version 20080409
 %define version     0.%{src_version}
 %define release     %mkrel 1
 %define src_name    umeplus-fonts
