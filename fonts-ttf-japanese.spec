@@ -1,6 +1,6 @@
 %define src_version 20091208
 %define version     0.%{src_version}
-%define release     %mkrel 1
+%define release     %mkrel 2
 %define src_name    umeplus-fonts
 
 Summary:	Japanese TrueType fonts
@@ -21,8 +21,6 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	freetype-tools
 Obsoletes:	xtt-fonts
 Provides:	xtt-fonts
-Requires(post): fontconfig >= 2.4.1
-Requires(postun): fontconfig >= 2.4.1
 
 %description
 This Package provides Free Japanese TrueType fonts (umeplus-gothic, 
