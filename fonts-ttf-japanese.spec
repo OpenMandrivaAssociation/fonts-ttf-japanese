@@ -1,6 +1,6 @@
 %define src_version 20100418
 %define version     0.%{src_version}
-%define release     %mkrel 1
+%define release     %mkrel 2
 %define src_name    umeplus-fonts
 
 Summary:	Japanese TrueType fonts
