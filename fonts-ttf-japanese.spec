@@ -1,6 +1,6 @@
-%define src_version 20100418
+%define src_version 20110312
 %define version     0.%{src_version}
-%define release     %mkrel 3
+%define release     %mkrel 1
 %define src_name    umeplus-fonts
 
 Summary:	Japanese TrueType fonts
@@ -12,7 +12,7 @@ URL:		http://www.geocities.jp/ep3797/modified_fonts_01.html
 Group:		System/Fonts/True type
 
 ## Original fonts is here
-Source0:	http://www.geocities.jp/ep3797/snapshot/modified_fonts/%{src_name}-%{src_version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/mdk-ut/umeplus-fonts-%{src_version}.tar.lzma
 Source3:	cidinst.japanese
 Source4:	cidunin.japanese
 
@@ -28,8 +28,6 @@ umeplus-p-gothic)
 
 %prep
 %setup -q -n %{src_name}-%{src_version}
-
-%build
 
 %install
 rm -fr %buildroot
