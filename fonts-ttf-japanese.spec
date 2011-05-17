@@ -1,6 +1,6 @@
 %define src_version 20110312
 %define version     0.%{src_version}
-%define release     %mkrel 1
+%define release     %mkrel 2
 %define src_name    umeplus-fonts
 
 Summary:	Japanese TrueType fonts
@@ -19,6 +19,7 @@ Source4:	cidunin.japanese
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	freetype-tools
+BuildRequires:	fontconfig
 Obsoletes:	xtt-fonts
 Provides:	xtt-fonts
 
