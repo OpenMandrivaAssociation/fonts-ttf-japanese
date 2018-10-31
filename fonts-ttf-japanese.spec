@@ -4,7 +4,7 @@
 Summary:	Japanese TrueType fonts
 Name:		fonts-ttf-japanese
 Version:	0.%{src_version}
-Release:	9
+Release:	10
 License:	Distributable
 Group:		System/Fonts/True type
 Url:		http://www.geocities.jp/ep3797/modified_fonts_01.html
