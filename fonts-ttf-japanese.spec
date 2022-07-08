@@ -3,8 +3,8 @@
 
 Summary:	Japanese TrueType fonts
 Name:		fonts-ttf-japanese
-Version:	0.%{src_version}
-Release:	10
+Version:	0.20131109
+Release:	1
 License:	Distributable
 Group:		System/Fonts/True type
 Url:		http://www.geocities.jp/ep3797/modified_fonts_01.html
