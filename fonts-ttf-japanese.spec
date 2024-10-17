@@ -7,7 +7,7 @@ Version:	0.20131109
 Release:	2
 License:	Distributable
 Group:		System/Fonts/True type
-Url:		http://www.geocities.jp/ep3797/modified_fonts_01.html
+Url:		https://www.geocities.jp/ep3797/modified_fonts_01.html
 ## Original fonts is here
 Source0:	http://downloads.sourceforge.net/mdk-ut/umeplus-fonts-%{src_version}.tar.lzma
 Source3:	cidinst.japanese
